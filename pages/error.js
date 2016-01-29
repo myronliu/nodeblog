@@ -3,7 +3,7 @@ var React = require('react');
 module.exports = React.createClass({
   getInitialState: function(){
     return {
-      pageTitle: "添加广告",
+      pageTitle: "",
       site:"",
       location:"",
       startTime: "",
@@ -21,8 +21,8 @@ module.exports = React.createClass({
   },
   render:function(){
     return (
-      <div className="mainWihteDiv" onClick={this.handleClick}>
-        <h1>hhhhhafasdfsadlfs</h1>
+      <div onClick={this.handleClick}>
+        <h1>error</h1>
       </div>
     )
   }

@@ -16,12 +16,12 @@
   <%- typeof headerData === 'undefined' ? '' : headerData %>
 </header>
 <div id="container">
-  <div style="height: 100%;"><%- reactOutput %></div>
+  <div style="height: 100%;" id="react-body-container"><%- reactOutput %></div>
 </div>
 </body>
 <script><%- typeof stateData === 'undefined'?'':stateData%></script>
 <!-- build:js -->
 
-<!-- <script type="text/javascript" src="/bundle.min.js"></script> -->
+<script type="text/javascript" src="bundle.js"></script>
 <!-- endbuild -->
 </html>

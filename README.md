@@ -30,3 +30,11 @@ npm start
 启动程序使用gulp，so easy～
 安装包："gulp"、"gulp-nodemon"
 需要在根目录下新建gulpfile.js文件，然后新建gulp.task
+
+############
+做了error页的路由、将／routes/index.js ---> /routes/serverrouter.js
+安装：
+  browserify、vinyl-source-stream
+静态资源的加载：app.use(express.static(path.join(__dirname, 'assets')));／／这里要设置好目录
+
+为了实现isomophic、客户端事件，加入客户端路由（待完成）
