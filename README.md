@@ -24,3 +24,9 @@ npm start
 坑一：安装react之后，app.js中设置模版引擎之后发现依然不认识，所以要先安装node-jsx
 坑二：安装node-jsx之后，还是报错，好吧，app.js中要在设置模版引擎之前加入代码：require("node-jsx").install({ extension: ".js" });
 坑三：文件路径找不到。。。少了"/"
+
+-------------------------
+2016\1\29
+启动程序使用gulp，so easy～
+安装包："gulp"、"gulp-nodemon"
+需要在根目录下新建gulpfile.js文件，然后新建gulp.task
