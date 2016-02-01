@@ -20,8 +20,9 @@ module.exports = React.createClass({
     console.log("this is a test");
   },
   render:function(){
+    console.log("slkdjfsdlkjfsldkjfj-----")
     return (
-      <div className="mainWihteDiv" onClick={this.handleClick}>
+      <div  onClick={this.handleClick}>
         <h1>hhhhhafasdfsadlfs</h1>
       </div>
     )

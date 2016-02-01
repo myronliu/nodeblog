@@ -2,9 +2,11 @@ var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var reactify = require('reactify');
 
 gulp .task('packagejs', function(){
   return browserify({entries: './main.js', extensions: ['.js'], debug: true})
+    .transform(reactify)//jsx编译成正常的js
     .bundle()
     .on('error',function(err){
       console.error(err.message.red);
@@ -24,6 +26,6 @@ gulp.task('s', function(){
     script:'./bin/www'
   })
   .on('start',['packagejs'])
-  .on('change',['packagejs'])
+  // .on('change',['packagejs'])
   .on('restart',['packagejs'])
 })
