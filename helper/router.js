@@ -19,7 +19,6 @@ Router.prototype.__create__ = function(routers){
   routerInit.query = function(key){
     return queryString.parse(location.search)[key];
   }
-  
   return routerInit;
 };
 

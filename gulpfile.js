@@ -23,9 +23,10 @@ gulp .task('packagejs', function(){
 
 gulp.task('s', function(){
   nodemon({
-    script:'./bin/www'
+    script:'./bin/www',
+    ignore: ['./assets/']//添加这句话就可以解决不停的重启问题啦啦啦啦啦～～～～
   })
   .on('start',['packagejs'])
-  // .on('change',['packagejs'])
+  .on('change',['packagejs'])
   .on('restart',['packagejs'])
 })

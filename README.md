@@ -73,6 +73,17 @@ ps：明天晚上就要出发回家过年了，感觉心要飞了，呵呵呵～
 TODO: 解决每次修改之后保存文件，然后gulp监听change、restart的死循环问题，简单来说就是在不停的掉gulp的task
 
 
+-------------------------
+2016\02\03
+gulp.task('s', function(){
+  nodemon({
+    script:'./bin/www',
+    ignore: ['./assets/']//添加这句话就可以解决不停的重启问题啦啦啦啦啦～～～～
+  })
+  .on('start',['packagejs'])
+  .on('change',['packagejs'])
+  .on('restart',['packagejs'])
+})
 
 
 
